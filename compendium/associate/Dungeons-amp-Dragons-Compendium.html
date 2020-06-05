@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Dungeons &amp; Dragons Compendium
+</title><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><link href="styles/default.css" type="text/css" media="all" rel="Stylesheet" /><link href="greybox/gb_styles.css" rel="stylesheet" type="text/css" /><link href="styles/filters.css" rel="stylesheet" type="text/css" />
+    
+    
+    
+    
+</head>
+<body>
+    <form name="form1" method="post" action="default.aspx" id="form1">
+<div>
+
+
+
+
+
+<div>
+
+	
+    <div id="main">
+		
+		<div id="pagebackground" />
+		<div id="searchtext">
+			<span id="searchtext_label">Search:</span>
+			<img src="images/search_button_d.png" id="searchbutton" alt="" />
+			<select id="category">
+				<option value="">All Categories</option>
+				<option value="Background" id="Background">Backgrounds</option>
+                <option value="Theme" id="Theme">Character Themes</option>
+				<option value="Class" id="Class">Classes</option>
+                <option value="Companion" id="Companion">Companions & Familiars</option>
+				<option value="Monster" id="Monster">Creatures</option>
+				<option value="Deity" id="Deity">Deities</option>
+                <option value="Disease" id="Disease">Diseases</option>
+				<option value="EpicDestiny" id="EpicDestiny">Epic Destinies</option>
+				<option value="Feat" id="Feat">Feats</option>
+				<option value="Glossary" id="Glossary">Glossary</option>
+				<option value="Item" id="Item">Items</option>
+				<option value="ParagonPath" id="ParagonPath">Paragon Paths</option>
+				<option value="Poison" id="Poison">Poisons</option>
+				<option value="Power" id="Power">Powers</option>
+				<option value="Race" id="Race">Races</option>
+				<option value="Ritual" id="Ritual">Rituals</option>
+				<option value="Terrain" id="Terrain">Terrain</option>
+				<option value="Trap" id="Trap">Traps</option>
+            </select> 
+			
+		<a href="#" id="help">Compendium Help</a>
+
+		<div id="filters">
+			<span id="filter_title">Filters:</span>
+			<img id="filter_apply" alt="Apply Filter" src="images/filter_apply_d.png" />
+			<img id="filter_reset" alt="Reset Filter" src="images/filter_reset_d.png" />
+			<div id="filterBackground">
+				<table id="background_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Campaign</td>
+						<td><select id="background_campaign"><option value="-1">Select All</option></select></td>
+						<td class="filtercell_wide">Associated Skill</td>
+						<td><select id="background_skill"><option value="-1">Select All</option></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Type</td>
+						<td><select id="background_type"><option value="-1">Select All</option></select></td>
+						<td class="filtercell_wide">Source</td>
+						<td><select id="background_source"></select></td>
+					</tr>
+				</table>
+			</div>
+			<div id="filterClass">
+                <table id="class_table" class="filtertable">
+                    <tr>
+                        <td class="filtercell_wide">Role</td>
+                        <td><select id="class_role"><option>Select All</option><option>Controller</option><option>Defender</option><option>Leader</option><option>Striker</option></select></td>
+                        <td class="filtercell">Source</td>
+                        <td><select id="class_source"></select></td>
+                    </tr>
+                    <tr>
+                        <td class="filtercell_wide">Power Source</td>
+                        <td><select id="class_powersource"><option>Select All</option></select></td>
+                        <td class="filtercell"></td>
+                        <td></td>
+                    </tr>
+                    </table>				
+			</div>
+			<div id="filterCompanion">
+				<table id="companion_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Type</td>
+						<td><select id="companion_type"><option value="-1">Select All</option><option value="Animal Companion">Animal Companion</option><option value="Companion">Companion</option><option value="Elemental Companion">Elemental Companion</option><option value="Familiar">Familiar</option><option value="Fey Beast Companion">Fey Beast Companion</option><option value="Mount">Mount</option><option value="Summoned Creature">Summoned Creature</option></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Source</td>
+						<td><select id="companion_source"></select></td>
+					</tr>
+				</table>
+			</div>
+			<div id="filterDeity">
+				<table id="deity_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Alignment</td>
+						<td><select id="deity_alignment">
+							<option value="-1">Select All</option>
+							<option value="Lawful Good">Lawful Good</option>
+							<option value="Good">Good</option>
+							<option value="Evil">Evil</option>
+							<option value="Chaotic Evil">Chaotic Evil</option>
+							<option value="Unaligned">Unaligned</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Source</td>
+						<td><select id="deity_source"></select></td>
+					</tr>
+				</table>
+			</div>
+   			<div id="filterDisease" class="notable">
+				Source <select id="disease_source"></select>
+			</div>
+			<div id="filterEpicDestiny" class="notable">
+				Source <select id="epic_source"></select>
+			</div>
+			<div id="filterFeat">
+				<table id="feat_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Category</td>
+						<td><select id="feat_tier"><option value="-1">Select All</option><option value="Heroic">Heroic</option><option value="Paragon">Paragon</option><option value="Epic">Epic</option><option value="Other">Other</option></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Source</td>
+						<td><select id="feat_source"></select></td>
+					</tr>
+				</table>
+			</div>
+			<div id="filterGlossary">
+				<table id="glossary_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Category</td>
+						<td><select id="glossary_category"><option value="-1">Select All</option></select></td>
+						<td class="filtercell">Source</td>
+						<td><select id="glossary_source"></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Type</td>
+						<td><select id="glossary_type"><option value="-1">Select All</option></select></td>
+					</tr>
+				</table>
+			</div>
+			<div id="filterItem">
+				<table id="item_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Category</td>
+						<td>
+                            <select id="item_category">
+                                <option>Select All</option>
+                                <optgroup label="Mundane"><option>Armor</option><option>Equipment</option><option>Weapon</option></optgroup>
+                                <optgroup label="Magic" id="magic"></optgroup>
+                            </select>
+                        </td>
+						<td class="filtercell" style="width:60px;">Level</td>
+						<td>
+			<div id="filterMonster">
+				<table id="monster_table" class="filtertable">
+					<tr>
+						<td class="filtercell_wide">Main Role</td>
+						<td><select id="monster_combat_role"><option value="-1">Select All</option><option>Skirmisher</option><option>Soldier</option><option>Controller</option><option>Artillery</option><option>Lurker</option><option>Brute</option></select></td>
+						<td class="filtercell">Level</td>
+						<td>
+			<div id="filterParagonPath">
+				<table id="paragon_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Class</td>
+						<td><select id="paragon_class"><option>Select All</option></select></td>
+						<td class="filtercell">Source</td>
+						<td><select id="paragon_source"></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Race</td>
+						<td><select id="paragon_race"><option>Select All</option></select></td>
+						<td class="filtercell"></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+   			<div id="filterPoison" class="notable">
+				Source <select id="poison_source"></select>
+			</div>
+			<div id="filterPower">
+				<table id="power_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Type</td>
+						<td><select id="power_class">
+                            <optgroup label="General"><option value="-1">Select All</option><option value="-2">Class Powers</option><option value="-3">Path Powers</option><option value="-4">Destiny Powers</option><option value="-5">Racial Powers</option><option value="-6">Feat Powers</option><option value="-7">Skill Powers</option><option value="-8">Theme Powers</option><option value="-9">Wild Talent Powers</option></optgroup>
+                            <optgroup label="By Class" id="pc_by_class"></optgroup>
+                            <optgroup label="By Race" id="pc_by_race"></optgroup>
+                        </select></td>
+						<td class="filtercell">Usage</td>
+						<td><select id="power_usage"><option value="-1">Select All</option></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Kind</td>
+						<td><select id="power_kind"><option value="-1">Select All</option></select></td>
+						<td class="filtercell">Action Type</td>
+						<td><select id="power_action_type"><option value="-1">Select All</option></select></td>
+					</tr>
+					<tr>
+						<td class="filtercell">Source</td>
+						<td><select id="power_source"></select></td>
+						<td class="filtercell">Level</td>
+						<td>
+			<div id="filterRace" class="notable">
+				Source <select id="race_source"></select>
+			</div>
+			<div id="filterRitual">
+				<table id="ritual_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Key Skill</td>
+						<td><select id="ritual_key_skill"><option>Select All</option></select></td>
+						<td class="filtercell">Level</td>
+						<td>
+			<div id="filterTerrain">
+            <table id="terrain_table" class="filtertable">
+                <tr>
+                    <td class="filtercell">Type</td>
+                    <td><select id="terrain_type"><option value="-1">Select All</option><option value="1">Fantastic Terrain</option><option value="2">Terrain Power</option></select></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="filtercell">Source</td>
+                    <td><select id="terrain_source"></select></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>				
+			</div>
+			<div id="filterTheme" class="notable">
+				Source <select id="theme_source"></select>
+			</div>
+			<div id="filterTrap">
+				<table id="trap_table" class="filtertable">
+					<tr>
+						<td class="filtercell">Main Role</td>
+						<td><select id="trap_role"><option value="-1">Select All</option></select></td>
+						<td class="filtercell">Level</td>
+						<td>
+
+		</div>
+
+		<div id="results">
+			<div id="resultstop" >
+				<span id="results_title">Search Results:</span>
+				<span id="results_per_page">Results per page: 20 &nbsp;|&nbsp;
+					<a href="javascript:SetResultsPerPage(50);">50</a> &nbsp;|&nbsp; <a href="javascript:SetResultsPerPage(100);">100</a>
+				</span>
+			</div>
+			<div id="resultsbody">
+				<table class="resultsTable">
+					<tr style="width:990px;height:24px;background-color:#000000;">
+						<td></td>
+					</tr>
+					<tr style="background-color:#FFFFFF;">
+						<td>
+							<div style="width:990px;height:416px;overflow:scroll;">
+							</div>
+						</td>
+					</tr>
+					<tr style="width:990px;height:24px;background-color:#000000;">
+						<td>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="resultsbottom">
+				<span id="page_nav_bottom">&nbsp;</span>
+			</div>
+		</div>
+
+		<div id="footer">
+			<span id="copy_notice">Copyright 1995-2016 Wizards of the Coast LLC. a subsidiary of Hasbro, Inc. All Rights Reserved. Version 3.0.147.0</span>
+			<span id="footer_text">
+				<a href="http://ww2.wizards.com/Company/Default.aspx?doc=SiteLegalNotice" id="terms_link">Terms of Use</a> 
+				&nbsp;&nbsp;&bull;&nbsp;&nbsp; 
+				<a href="http://ww2.wizards.com/Company/Default.aspx?doc=Privacy" id="privacy_link">Privacy Statement</a>
+				&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+				<a href="http://community.wizards.com/go/thread/view/75882/19760478/D38;D_Compendium_Feedback_Thread" id="forums_link">Forums</a> 
+				&nbsp;&nbsp;&bull;&nbsp;&nbsp; 
+				<a href="http://wizards.custhelp.com/cgi-bin/wizards.cfg/php/enduser/std_adp.php?p_faqid=1425" id="feedback_link">Feedback</a>
+			</span>
+
+		</div>
+    </div>
+
+    </form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
