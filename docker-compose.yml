@@ -1,0 +1,10 @@
+version: "3"
+services:
+  php:
+    container_name: dnd4e-data-html
+    image: php:7.2-apache
+    volumes:
+        - .:/var/www/html
+    restart: always
+    ports:
+        - "80:80"
