@@ -39,6 +39,8 @@ function setCheckbox($name, $folders) {
             if ($folder == $name)
                 echo "checked";
         }
+        if (count($folders) >= 18)
+            echo " checked";
     }
     else {
         echo "checked";
