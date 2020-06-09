@@ -66,7 +66,7 @@ if (isset($_GET['folders'])) {
 	<br />
 	Folders:
 	<input class='inputbox' id='check2' type='checkbox' name='folders[]' value='associate' <?php setCheckbox('associate', $folders); ?> /><label for='check2'>associate</label>
-<input class='inputbox' id='check3' type='checkbox' name='folders[]' value='backgrounds' <?php setCheckbox('assocbackgroundsate', $folders); ?> /><label for='check3'>backgrounds</label>
+<input class='inputbox' id='check3' type='checkbox' name='folders[]' value='backgrounds' <?php setCheckbox('backgrounds', $folders); ?> /><label for='check3'>backgrounds</label>
 <input class='inputbox' id='check4' type='checkbox' name='folders[]' value='class' <?php setCheckbox('class', $folders); ?> /><label for='check4'>class</label>
 <input class='inputbox' id='check5' type='checkbox' name='folders[]' value='deity' <?php setCheckbox('deity', $folders); ?> /><label for='check5'>deity</label>
 <input class='inputbox' id='check6' type='checkbox' name='folders[]' value='disease' <?php setCheckbox('disease', $folders); ?> /><label for='check6'>disease</label>
