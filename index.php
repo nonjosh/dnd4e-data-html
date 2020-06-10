@@ -98,7 +98,7 @@ if (isset($_GET['folders'])) {
 <?php
 foreach($final_output as $output) {
 	foreach($output as $result) {
-		$result_url =  str_replace("/var/www/html", "http://$_SERVER[HTTP_HOST]", $result);
+		$result_url =  str_replace("/var/www/html", "http://$_SERVER[HTTP_X_FORWARDED_HOST]", $result);
 		$result_name = getName($result_url);
 		echo "<a href=\"$result_url\" target=\"result\">$result_name</a><br>";
 	}
