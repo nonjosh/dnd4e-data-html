@@ -22,6 +22,13 @@ if (isset($_GET['folders'])) {
 	$folders = $_GET['folders'];
 }
 ?>
+<?php
+// set API scripts
+if (isset($_GET['api'])) {
+	include 'api.php';
+	die();
+}
+?>
 <html>
 <head>
 	<title>Funin.space compendium</title>
