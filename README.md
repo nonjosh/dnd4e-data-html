@@ -16,7 +16,7 @@ docker-compose down
 
 ## API
 
-Example call: `http://vm1.nonjosh.info/?search=avenger&folders%5B%5D=class&api=true`
+Example call: `http://localhost/?search=avenger&folders%5B%5D=class&api=true`
 
 Response:
 
