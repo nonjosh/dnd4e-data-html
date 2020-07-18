@@ -5,13 +5,13 @@
 build and create GUI container for searching
 
 ```sh
-bash start.sh
+./start.sh
 ```
 
 stop and remove container
 
 ```sh
-bash rm.sh
+./rm.sh
 ```
 
 ## API
