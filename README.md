@@ -6,12 +6,18 @@ build and create GUI container for searching
 
 ```sh
 ./start.sh
+
+# or if you use Docker Compose
+# docker-compose up -d
 ```
 
 stop and remove container
 
 ```sh
 ./rm.sh
+
+# or if you use Docker Compose
+# docker-compose down
 ```
 
 ## API

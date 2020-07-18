@@ -1,0 +1,11 @@
+version: '3.7'
+
+services: 
+    app:
+        build: .
+        image: dnd4e-data-html
+        container_name: dnd4e-data-html
+        ports: 
+            - 1080:80
+        restart: always
+        network_mode: bridge
