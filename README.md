@@ -5,7 +5,7 @@
 build and create GUI container for searching
 
 ```sh
-bash start
+bash start.sh
 ```
 
 stop and remove container
