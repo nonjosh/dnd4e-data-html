@@ -5,19 +5,21 @@
 build and create GUI container for searching
 
 ```sh
-./start.sh
+# run the bash script
+bash start.sh
 
 # or if you use Docker Compose
-# docker-compose up -d
+docker-compose up -d
 ```
 
 stop and remove container
 
 ```sh
-./rm.sh
+# run the bash script
+bash rm.sh
 
 # or if you use Docker Compose
-# docker-compose down
+docker-compose down
 ```
 
 ## API
