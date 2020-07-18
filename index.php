@@ -17,6 +17,9 @@ if (isset($_GET['folders'])) {
     foreach($_GET['folders'] as $search_folder) {
 		$path = $main_path.$search_folder."/";
 		$output = searchStrings($path, $keyword_list);
+		foreach ($output as &$str) {
+			$str = str_replace('/var/www/html', '', $str);
+		}
 		$final_output[$search_folder] = $output;
 	}
 	$folders = $_GET['folders'];
@@ -104,8 +107,7 @@ if (isset($_GET['api'])) {
 	<div class="resultlist">
 <?php
 foreach($final_output as $output) {
-	foreach($output as $result) {
-		$result_url =  str_replace("/var/www/html", "http://$_SERVER[HTTP_X_FORWARDED_HOST]", $result);
+	foreach($output as $result_url) {
 		$result_name = getName($result_url);
 		echo "<a href=\"$result_url\" target=\"result\">$result_name</a><br>";
 	}

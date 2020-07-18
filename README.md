@@ -16,7 +16,7 @@ stop and remove container
 
 ## API
 
-Example call: `http://localhost:1080/?search=avenger&folders%5B%5D=class&api=true`
+Example call: `http://localhost:1080/?search=avenger&folders[]=class&api=true`
 
 Response:
 
@@ -31,14 +31,14 @@ Response:
   },
   "data": {
     "class": [
-      "/var/www/html/compendium/class/Invoker.html",
-      "/var/www/html/compendium/class/Paladin.html",
-      "/var/www/html/compendium/class/Hybrid-Wizard.html",
-      "/var/www/html/compendium/class/Hybrid-Avenger.html",
-      "/var/www/html/compendium/class/Hybrid-Monk.html",
-      "/var/www/html/compendium/class/Hybrid-Shaman.html",
-      "/var/www/html/compendium/class/Hybrid-Druid.html",
-      "/var/www/html/compendium/class/Avenger.html"
+      "/compendium/class/Invoker.html",
+      "/compendium/class/Paladin.html",
+      "/compendium/class/Hybrid-Wizard.html",
+      "/compendium/class/Hybrid-Avenger.html",
+      "/compendium/class/Hybrid-Monk.html",
+      "/compendium/class/Hybrid-Shaman.html",
+      "/compendium/class/Hybrid-Druid.html",
+      "/compendium/class/Avenger.html"
     ]
   }
 }
