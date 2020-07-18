@@ -1,1 +1,1 @@
-docker build . -t nonjosh/dnd4e-data:1.0.0
+docker build . -t nonjosh/dnd4e-data-html:1.0.0
