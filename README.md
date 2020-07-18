@@ -2,21 +2,21 @@
 
 ## How to use
 
-create GUI container for searching
+build and create GUI container for searching
 
 ```sh
-docker-compose up -d
+bash start
 ```
 
 stop and remove container
 
 ```sh
-docker-compose down
+bash rm.sh
 ```
 
 ## API
 
-Example call: `http://localhost/?search=avenger&folders%5B%5D=class&api=true`
+Example call: `http://localhost:1080/?search=avenger&folders%5B%5D=class&api=true`
 
 Response:
 
