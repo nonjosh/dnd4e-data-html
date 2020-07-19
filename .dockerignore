@@ -1,5 +1,9 @@
-Dockerfile
+**/.git
+**/.DS_Store
+**/node_modules
+**/.vscode
 README.md
+Dockerfile
 docker-compose.yml
-*.sh
 LICENSE
+*.sh
