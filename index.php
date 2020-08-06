@@ -106,11 +106,17 @@ if (isset($_GET['api'])) {
 	</div>
 	<div class="resultlist">
 <?php
-foreach($final_output as $output) {
-	foreach($output as $result_url) {
-		$result_name = getName($result_url);
-		echo "<a href=\"$result_url\" target=\"result\">$result_name</a><br>";
-	}
+foreach($final_output as $key => $output) {
+    echo "<b> - $key</b><br>";
+    if (count($output) > 0) {
+        foreach($output as $result_url) {	
+            $result_name = getName($result_url);
+            echo "<a href=\"$result_url\" target=\"result\">$result_name</a><br>";
+        }
+    } else {
+        echo "<font>No result</font><br>";
+    }
+    echo "<br>";
 }
 ?>
 	</div>
