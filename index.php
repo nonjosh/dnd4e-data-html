@@ -4,7 +4,6 @@ include 'functions.php';
 <?php
 // get searching keywords
 if (isset($_GET['search'])){
-	$search = 
 	$keyword_list = explode(" ", $_GET['search']);
 }
 
