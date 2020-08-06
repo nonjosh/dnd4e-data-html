@@ -69,29 +69,29 @@ if (isset($_GET['api'])) {
 		<div class="column3"><a href="compendium">manual search</a></div>
 	</div>
 	<form id="SearchForm" method="get" action="index.php">
-	<input type="text" name="search" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>" />
+	<input type="text" name="search" value="<?php if (isset($_GET['search'])) {echo $_GET['search'];} ?>" />
 	<input type="submit" value="search"/>
 	<br />
 	Folders:
 	<input class='inputbox' id='check2' type='checkbox' name='folders[]' value='associate' <?php setCheckbox('associate', $folders); ?> /><label for='check2'>associate</label>
-<input class='inputbox' id='check3' type='checkbox' name='folders[]' value='backgrounds' <?php setCheckbox('backgrounds', $folders); ?> /><label for='check3'>backgrounds</label>
-<input class='inputbox' id='check4' type='checkbox' name='folders[]' value='class' <?php setCheckbox('class', $folders); ?> /><label for='check4'>class</label>
-<input class='inputbox' id='check5' type='checkbox' name='folders[]' value='deity' <?php setCheckbox('deity', $folders); ?> /><label for='check5'>deity</label>
-<input class='inputbox' id='check6' type='checkbox' name='folders[]' value='disease' <?php setCheckbox('disease', $folders); ?> /><label for='check6'>disease</label>
-<input class='inputbox' id='check7' type='checkbox' name='folders[]' value='epicdestiny' <?php setCheckbox('epicdestiny', $folders); ?> /><label for='check7'>epicdestiny</label>
-<input class='inputbox' id='check8' type='checkbox' name='folders[]' value='feat' <?php setCheckbox('feat', $folders); ?> /><label for='check8'>feat</label>
-<input class='inputbox' id='check9' type='checkbox' name='folders[]' value='glossary' <?php setCheckbox('glossary', $folders); ?> /><label for='check9'>glossary</label>
-<input class='inputbox' id='check10' type='checkbox' name='folders[]' value='item' <?php setCheckbox('item', $folders); ?> /><label for='check10'>item</label>
-<input class='inputbox' id='check11' type='checkbox' name='folders[]' value='monster' <?php setCheckbox('monster', $folders); ?> /><label for='check11'>monster</label>
-<input class='inputbox' id='check12' type='checkbox' name='folders[]' value='paragonpath' <?php setCheckbox('paragonpath', $folders); ?> /><label for='check12'>paragonpath</label>
-<input class='inputbox' id='check13' type='checkbox' name='folders[]' value='poison' <?php setCheckbox('poison', $folders); ?> /><label for='check13'>poison</label>
-<input class='inputbox' id='check14' type='checkbox' name='folders[]' value='power' <?php setCheckbox('power', $folders); ?> /><label for='check14'>power</label>
-<input class='inputbox' id='check15' type='checkbox' name='folders[]' value='race' <?php setCheckbox('race', $folders); ?> /><label for='check15'>race</label>
-<input class='inputbox' id='check16' type='checkbox' name='folders[]' value='ritual' <?php setCheckbox('ritual', $folders); ?> /><label for='check16'>ritual</label>
-<input class='inputbox' id='check17' type='checkbox' name='folders[]' value='terrain' <?php setCheckbox('terrain', $folders); ?> /><label for='check17'>terrain</label>
-<input class='inputbox' id='check18' type='checkbox' name='folders[]' value='theme' <?php setCheckbox('theme', $folders); ?> /><label for='check18'>theme</label>
-<input class='inputbox' id='check19' type='checkbox' name='folders[]' value='traps' <?php setCheckbox('traps', $folders); ?> /><label for='check19'>traps</label>
-<input id='checkAll' class='toggleBox' type='checkbox' name='checkAll' <?php setCheckbox('checkAll', $folders); ?> onClick='toggleAll(this)'/><label class='labelForButton' for='checkAll'>deselect all</label>
+	<input class='inputbox' id='check3' type='checkbox' name='folders[]' value='backgrounds' <?php setCheckbox('backgrounds', $folders); ?> /><label for='check3'>backgrounds</label>
+	<input class='inputbox' id='check4' type='checkbox' name='folders[]' value='class' <?php setCheckbox('class', $folders); ?> /><label for='check4'>class</label>
+	<input class='inputbox' id='check5' type='checkbox' name='folders[]' value='deity' <?php setCheckbox('deity', $folders); ?> /><label for='check5'>deity</label>
+	<input class='inputbox' id='check6' type='checkbox' name='folders[]' value='disease' <?php setCheckbox('disease', $folders); ?> /><label for='check6'>disease</label>
+	<input class='inputbox' id='check7' type='checkbox' name='folders[]' value='epicdestiny' <?php setCheckbox('epicdestiny', $folders); ?> /><label for='check7'>epicdestiny</label>
+	<input class='inputbox' id='check8' type='checkbox' name='folders[]' value='feat' <?php setCheckbox('feat', $folders); ?> /><label for='check8'>feat</label>
+	<input class='inputbox' id='check9' type='checkbox' name='folders[]' value='glossary' <?php setCheckbox('glossary', $folders); ?> /><label for='check9'>glossary</label>
+	<input class='inputbox' id='check10' type='checkbox' name='folders[]' value='item' <?php setCheckbox('item', $folders); ?> /><label for='check10'>item</label>
+	<input class='inputbox' id='check11' type='checkbox' name='folders[]' value='monster' <?php setCheckbox('monster', $folders); ?> /><label for='check11'>monster</label>
+	<input class='inputbox' id='check12' type='checkbox' name='folders[]' value='paragonpath' <?php setCheckbox('paragonpath', $folders); ?> /><label for='check12'>paragonpath</label>
+	<input class='inputbox' id='check13' type='checkbox' name='folders[]' value='poison' <?php setCheckbox('poison', $folders); ?> /><label for='check13'>poison</label>
+	<input class='inputbox' id='check14' type='checkbox' name='folders[]' value='power' <?php setCheckbox('power', $folders); ?> /><label for='check14'>power</label>
+	<input class='inputbox' id='check15' type='checkbox' name='folders[]' value='race' <?php setCheckbox('race', $folders); ?> /><label for='check15'>race</label>
+	<input class='inputbox' id='check16' type='checkbox' name='folders[]' value='ritual' <?php setCheckbox('ritual', $folders); ?> /><label for='check16'>ritual</label>
+	<input class='inputbox' id='check17' type='checkbox' name='folders[]' value='terrain' <?php setCheckbox('terrain', $folders); ?> /><label for='check17'>terrain</label>
+	<input class='inputbox' id='check18' type='checkbox' name='folders[]' value='theme' <?php setCheckbox('theme', $folders); ?> /><label for='check18'>theme</label>
+	<input class='inputbox' id='check19' type='checkbox' name='folders[]' value='traps' <?php setCheckbox('traps', $folders); ?> /><label for='check19'>traps</label>
+	<input id='checkAll' class='toggleBox' type='checkbox' name='checkAll' <?php setCheckbox('checkAll', $folders); ?> onClick='toggleAll(this)'/><label class='labelForButton' for='checkAll'>deselect all</label>
 	<script>
 	toggleText();
 	</script>
