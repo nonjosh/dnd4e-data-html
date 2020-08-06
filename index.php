@@ -31,7 +31,8 @@ if (isset($_GET['api'])) {
 	die();
 }
 ?>
-<html>
+<!DOCTYPE HTML>
+<html lang="en" xml:lang="en">
 <head>
 	<title>Funin.space compendium</title>
 	<link rel="stylesheet" href="styles/index.css">
