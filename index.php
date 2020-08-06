@@ -66,7 +66,7 @@ if (isset($_GET['api'])) {
 <body>
 <div class="topbar">
 	<div class="container">
-		<div class="column3"><a href="compendium">manual search (coming soon)</a></div>
+		<div class="column3"><a href="compendium">manual search</a></div>
 	</div>
 	<form id="SearchForm" method="get" action="index.php">
 	<input type="text" name="search" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>" />
