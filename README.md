@@ -1,5 +1,7 @@
 # DnD4e data (html and PHP)
 
+![Docker Image CI](https://github.com/nonjosh/dnd4e-data-html/workflows/Docker%20Image%20CI/badge.svg)
+
 ## How to use
 
 build and create GUI container for searching
