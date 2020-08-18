@@ -34,7 +34,7 @@ if (isset($_GET['api'])) {
 <!DOCTYPE HTML>
 <html lang="en" xml:lang="en">
 <head>
-	<title>Funin.space compendium</title>
+	<title>data.dnd compendium</title>
 	<link rel="stylesheet" href="styles/index.css">
 	<script type="text/javascript">
 		function toggleAll(state) {
