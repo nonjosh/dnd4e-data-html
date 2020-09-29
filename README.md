@@ -7,8 +7,10 @@
 build and create GUI container for searching
 
 ```sh
-# run the bash script
-bash start.sh
+# build and run the docker image
+docker build . -t nonjosh/dnd4e-data-html:1.0.0
+docker run -d --name dnd4e-data-html -p 1080:80 --restart always nonjosh/dnd4e-data-html:1.0.0
+
 
 # or if you use Docker Compose
 docker-compose up -d
@@ -17,8 +19,9 @@ docker-compose up -d
 stop and remove container
 
 ```sh
-# run the bash script
-bash rm.sh
+# remove container and image
+docker rm -f dnd4e-data-html
+docker image rm nonjosh/dnd4e-data-html:1.0.0
 
 # or if you use Docker Compose
 docker-compose down
