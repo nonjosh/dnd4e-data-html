@@ -14,6 +14,10 @@ function searchStrings($path, $keyword_list) {
      }
     
     $result = call_user_func_array('array_intersect', $collection);
+
+    // sort the results
+    sort($result);
+
     return $result;
 }
 
@@ -23,6 +27,10 @@ function searchStrings2($path, $keyword_list) {
     $command = "grep -irl '$pattern' $path";
 	$output = array();
     exec($command, $output);
+    
+    // sort the results
+    sort($result);
+    
     return $output;
 }
 
