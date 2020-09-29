@@ -59,4 +59,4 @@ Response:
 
 ## Origin
 
-- [http://www.funin.space/]
+- [http://funin.space/]
