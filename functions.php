@@ -4,7 +4,7 @@
 function searchStrings($path, $keyword_list) {
 	$output = array();
     foreach ($keyword_list as $keyword) {
-        $command = "grep -irl '$keyword' $path";
+        $command = "grep -irl \"$keyword\" $path";
         exec($command, $output[]);
     }
 
