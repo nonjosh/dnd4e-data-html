@@ -14,6 +14,11 @@ docker run -d --name dnd4e-data-html -p 1080:80 --restart always nonjosh/dnd4e-d
 
 # or if you use Docker Compose
 docker-compose up -d
+
+# or if you use Kubernetes
+docker build . -t nonjosh/dnd4e-data-html
+kubectl apply -f app-deployment.yaml
+kubectl apply -f app-svc.yaml
 ```
 
 stop and remove container
@@ -25,6 +30,11 @@ docker image rm nonjosh/dnd4e-data-html:1.0.0
 
 # or if you use Docker Compose
 docker-compose down
+
+# or if you use Kubernetes
+kubectl delete -f app-deployment.yaml
+kubectl delete -f app-svc.yaml
+docker image rm nonjosh/dnd4e-data-html:latest
 ```
 
 ## API

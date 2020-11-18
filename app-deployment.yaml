@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dnd4e-data
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dnd4e-data
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: dnd4e-data
+    spec:
+      containers:
+      - image: nonjosh/dnd4e-data-html
+        name: dnd4e-data-html
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
