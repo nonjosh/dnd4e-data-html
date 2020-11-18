@@ -8,15 +8,15 @@ build and create GUI container for searching
 
 ```sh
 # build and run the docker image
-docker build . -t nonjosh/dnd4e-data-html:1.0.0
-docker run -d --name dnd4e-data-html -p 1080:80 --restart always nonjosh/dnd4e-data-html:1.0.0
+docker build . -t nonjosh/dnd4e-data-html:1.0.0a
+docker run -d --name dnd4e-data-html -p 1080:80 --restart always nonjosh/dnd4e-data-html:1.0.0a
 
 
 # or if you use Docker Compose
 docker-compose up -d
 
 # or if you use Kubernetes
-docker build . -t nonjosh/dnd4e-data-html
+docker build . -t nonjosh/dnd4e-data-html:1.0.0a
 kubectl apply -f app-deployment.yaml
 kubectl apply -f app-svc.yaml
 ```
@@ -26,7 +26,7 @@ stop and remove container
 ```sh
 # remove container and image
 docker rm -f dnd4e-data-html
-docker image rm nonjosh/dnd4e-data-html:1.0.0
+docker image rm nonjosh/dnd4e-data-html:1.0.0a
 
 # or if you use Docker Compose
 docker-compose down
@@ -34,7 +34,7 @@ docker-compose down
 # or if you use Kubernetes
 kubectl delete -f app-deployment.yaml
 kubectl delete -f app-svc.yaml
-docker image rm nonjosh/dnd4e-data-html:latest
+docker image rm nonjosh/dnd4e-data-html:1.0.0a
 ```
 
 ## API
