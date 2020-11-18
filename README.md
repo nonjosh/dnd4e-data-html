@@ -32,8 +32,8 @@ docker image rm nonjosh/dnd4e-data-html:1.0.0a
 docker-compose down
 
 # or if you use Kubernetes
-kubectl delete -f app-deployment.yaml
-kubectl delete -f app-svc.yaml
+kubectl delete -f k8s-deployment.yaml
+kubectl delete -f k8s-svc.yaml
 docker image rm nonjosh/dnd4e-data-html:1.0.0a
 ```
 

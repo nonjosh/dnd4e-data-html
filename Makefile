@@ -8,12 +8,12 @@ run:
 
 start:
 	docker build . -t nonjosh/dnd4e-data-html:1.0.0a
-	kubectl apply -f app-deployment.yaml
-	kubectl apply -f app-svc.yaml
+	kubectl apply -f k8s-deployment.yaml
+	kubectl apply -f k8s-svc.yaml
 
 rm:	
-	kubectl delete -f app-deployment.yaml
-	kubectl delete -f app-svc.yaml
+	kubectl delete -f k8s-deployment.yaml
+	kubectl delete -f k8s-svc.yaml
 	docker image rm nonjosh/dnd4e-data-html:1.0.0a
 
 test:
