@@ -17,8 +17,7 @@ docker-compose up -d
 
 # or if you use Kubernetes
 docker build . -t nonjosh/dnd4e-data-html:1.0.0a
-kubectl apply -f app-deployment.yaml
-kubectl apply -f app-svc.yaml
+kubectl apply -k k8s/base
 ```
 
 stop and remove container
@@ -32,8 +31,7 @@ docker image rm nonjosh/dnd4e-data-html:1.0.0a
 docker-compose down
 
 # or if you use Kubernetes
-kubectl delete -f k8s-deployment.yaml
-kubectl delete -f k8s-svc.yaml
+kubectl delete -k k8s/base
 docker image rm nonjosh/dnd4e-data-html:1.0.0a
 ```
 
