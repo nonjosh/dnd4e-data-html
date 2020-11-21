@@ -16,7 +16,7 @@ docker run -d --name dnd4e-data-html -p 1080:80 --restart always nonjosh/dnd4e-d
 docker-compose up -d
 
 # or if you use Kubernetes
-docker build . -t nonjosh/dnd4e-data-html:1.0.0a
+docker build . -t nonjosh/dnd4e-data-html
 kubectl apply -k k8s/base
 ```
 
@@ -25,14 +25,14 @@ stop and remove container
 ```sh
 # remove container and image
 docker rm -f dnd4e-data-html
-docker image rm nonjosh/dnd4e-data-html:1.0.0a
+docker image rm nonjosh/dnd4e-data-html
 
 # or if you use Docker Compose
 docker-compose down
 
 # or if you use Kubernetes
 kubectl delete -k k8s/base
-docker image rm nonjosh/dnd4e-data-html:1.0.0a
+docker image rm nonjosh/dnd4e-data-html
 ```
 
 ## API

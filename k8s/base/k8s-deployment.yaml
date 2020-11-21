@@ -14,7 +14,7 @@ spec:
         app: dnd4e-data
     spec:
       containers:
-      - image: nonjosh/dnd4e-data-html:1.0.0a
+      - image: nonjosh/dnd4e-data-html
         name: dnd4e-data-html
         imagePullPolicy: Never
         ports:
