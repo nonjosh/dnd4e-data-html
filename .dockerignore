@@ -6,5 +6,7 @@ README.md
 Dockerfile
 docker-compose.yml
 LICENSE
-*.sh
+Makefile
 .dockerignore
+k8s
+.github
