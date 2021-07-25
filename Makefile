@@ -9,7 +9,7 @@ start:
 	kubectl apply -k k8s/base
 rm:	
 	kubectl delete -k k8s/base
-	docker image rm nonjosh/dnd4e-data-html
+	docker image rm nonjosh/dnd4e-data-html -f
 test:
 	docker build . -t nonjosh/dnd4e-data-html
 	docker run --rm -v $(CUR_DIR):/var/www/html -p 1081:80 nonjosh/dnd4e-data-html
