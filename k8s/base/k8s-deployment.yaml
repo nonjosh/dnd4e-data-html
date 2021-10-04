@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dnd4e-data
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: dnd4e-data
