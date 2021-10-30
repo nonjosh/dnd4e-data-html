@@ -7,7 +7,7 @@ run:
 start:
 	docker build . -t nonjosh/dnd4e-data-html
 	kubectl apply -k k8s/base
-rm:	
+rm:
 	kubectl delete -k k8s/base
 	docker image rm nonjosh/dnd4e-data-html -f
 test:
