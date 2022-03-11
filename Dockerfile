@@ -1,4 +1,4 @@
-FROM php:7.4.26-apache
+FROM php:8.0.16-apache
 
 COPY . /var/www/html
 
