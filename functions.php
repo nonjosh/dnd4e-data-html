@@ -1,6 +1,6 @@
 <?php
 
-// search with AND 
+// search with AND
 function searchStrings($path, $keyword_list) {
 	$output = array();
     foreach ($keyword_list as $keyword) {
@@ -11,8 +11,8 @@ function searchStrings($path, $keyword_list) {
     $collection[1] = $output[0];
     foreach($output as $search_result) {
         $collection[] = $search_result;
-     }
-    
+    }
+
     $result = call_user_func_array('array_intersect', $collection);
 
     // sort the results
@@ -27,15 +27,16 @@ function searchStrings2($path, $keyword_list) {
     $command = "grep -irl '$pattern' $path";
 	$output = array();
     exec($command, $output);
-    
+
     // sort the results
     sort($result);
-    
+
     return $output;
 }
 
 function getName($url) {
-    $name = end(explode("/", $url));
+    $tmp = explode("/", $url);
+    $name = end($tmp);
     $name = str_replace(".html", "", $name);
     $name = str_replace("-", " ", $name);
     return $name;

@@ -1,4 +1,4 @@
-FROM php:8.0.16-apache
+FROM php:8.1.4-apache
 
 COPY . /var/www/html
 
@@ -6,4 +6,4 @@ RUN a2enmod headers
 
 EXPOSE 80
 
-HEALTHCHECK --interval=300s --timeout=3s --retries=3 CMD curl -f / http://localhost:80 || exit 1 
+HEALTHCHECK --interval=300s --timeout=3s --retries=3 CMD curl -f / http://localhost:80 || exit 1

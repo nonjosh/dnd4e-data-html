@@ -22,6 +22,8 @@ if (isset($_GET['folders'])) {
 		$final_output[$search_folder] = $output;
 	}
 	$folders = $_GET['folders'];
+} else {
+	$folders = null;
 }
 ?>
 <?php
@@ -43,14 +45,14 @@ if (isset($_GET['api'])) {
 			for (var i = 0; i < checkboxes.length; i++) {
 				checkboxes[i].checked = state.checked;
 			}
-			
+
 			toggleText();
 		}
 		function toggleText() {
 			var checkbox = document.getElementsByClassName('toggleBox');
 			var label = document.getElementsByClassName('labelForButton');
-			
-			label[0].innerHTML = checkbox[0].checked ? "deselect all" : "select all";		
+
+			label[0].innerHTML = checkbox[0].checked ? "deselect all" : "select all";
 		}
 	</script>
 	<script>
@@ -95,7 +97,7 @@ if (isset($_GET['api'])) {
 	<script>
 	toggleText();
 	</script>
-	
+
 	</form>
 </div>
 <div class="container">
@@ -108,11 +110,10 @@ foreach($final_output as $key => $output) {
 	$count = count($output);
 	echo "<b> - $key ($count result(s))</b><br>";
     if ($count > 0) {
-        foreach($output as $result_url) {	
+        foreach($output as $result_url) {
             $result_name = getName($result_url);
             echo "<a href=\"$result_url\" target=\"result\">$result_name</a><br>";
 		}
-		$total_result_count++;
 		echo "<br>";
 	}
 }
