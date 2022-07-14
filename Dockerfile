@@ -1,4 +1,4 @@
-FROM php:8.2.0alpha1-apache
+FROM php:8.2-rc-fpm
 
 COPY . /var/www/html
 
