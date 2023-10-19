@@ -1,4 +1,4 @@
-FROM php:8.2.7-apache-bullseye
+FROM php:8.3.0RC3-apache-bullseye
 
 COPY . /var/www/html
 
